@@ -141,11 +141,11 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | Designation       | Description                                                               | Value             | Unit        | Source  
 | :---              | :---                                                                      | :---              | :---        | :---      
 | $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | $BNID:101484$
-| $Q$               | number of housekeeping genes                                              | 3804              |             | $[3]$
-| $A_0$             | energy supply                                                             | $1.31·10^10$      | m.p.c./min  | $BNID:110879^1$
+| $Q$               | number of housekeeping genes (genes of \boldsymbol{q})                    | 3804              |             | $[3]$
+| $A_0$             | energy supply                                                             | $1.31·10^{10}$      | m.p.c./min  | $BNID:110879^1$
 | $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | $BNID:109393$
-| $N_q$             | median HeLa cell protein length                                           | 431               | aa          | $[4]$
-| $N_Q$             | median HeLa gen length                                                    | 1300              | bp          | $[4]^2$
+| $N_q$             | median HeLa cell protein length (\boldsymbol{q})                          | 431               | aa          | $[4]$
+| $N_Q$             | median HeLa gen length (genes of \boldsymbol{q})                          | 1300              | bp          | $[4]^2$
 | $N_L$             | LINE-1 length                                                             | 6000              | bp          | $[5]$
 | $N_S$             | SINE length                                                               | 300               | bp          | $[6]$
 | $N_{aa}$          | number of ATP molecules for adding one aa                                 | 5                 | m.p.c.      | $[7]$
@@ -163,25 +163,25 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $\theta_S$        | transcription threshold of one SINE                                       | $3.8·10^9$        | m.p.c.      | $BNID:111027$
 | $\gamma_{\max_q}$ | maximal translation rate of one aa from q-RNA                             | 300               | aa/min      | $BNID:104598^8$
 | $\gamma_{\max_L}$ | maximal translation rate of one aa from LINE-1 RNA                        | 300               | aa/min      | $BNID:104598$
-| $K_{\gamma_q}$    | translation threshold of one q-RNA                                        | 25900             | m.p.c.      | $[10]^9$
+| $K_{\gamma_q}$    | translation threshold of one \boldsymbol{q}-RNA                           | 25900             | m.p.c.      | $[10]^9$
 | $K_{\gamma_L}$    | translation threshold of one LINE-1 RNA                                   | 25900             | m.p.c.      | $[10]$
-| $k_{bq}$          | cq-complexes (RNA+ribosome) binding rate constant                         | $5·10^{-8}$       | 1/min       | $*$
-| $k_{bL}$          | cL-complexes (RNA+ribosome) binding rate constant                         | $5·10^{-8}$       | 1/min       | $*$
-| $k_{uq}$          | cq-complexes unbinding rate constant                                      | 0.01              | 1/min       | $*$
-| $k_{uL}$          | cL-complexes unbinding rate constant                                      | 0.01              | 1/min       | $*$
+| $k_{bq}$          | \boldsymbol{cq}-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
+| $k_{bL}$          | \boldsymbol{cL}-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
+| $k_{uq}$          | \boldsymbol{cq}-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
+| $k_{uL}$          | \boldsymbol{cL}-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
 | $k_{sub_S}$       | substitution of mL on mS rate constant in complex with ORF2p              | $5·10^{-8}$       | 1/min       | $*$
 | $k_{sub_L}$       | substitution of mS on mL rate constant in complex with ORF2p              | $5·10^{-6}$       | 1/min       | $*$
 | $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | $BNID:107347$
 | $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
-| $d_{mq}$          | q-RNAs degradation rate constant                                          | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cq}$          | cq-complexes degradation rate constant                                    | $1.55·10^{-3}$    | 1/min       | $*$
-| $d_{q}$           | q proteins degradation rate constant                                      | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{mq}$          | \boldsymbol{q}-RNAs degradation rate constant                             | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
+| $d_{cq}$          | \boldsymbol{cq}-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{q}$           | \boldsymbol{q} proteins degradation rate constant                         | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $d_{mL}$          | LINE-1 RNAs degradation rate constant                                     | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
 | $d_{mS}$          | SINE RNAs degradation rate constant                                       | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cL}$          | cL-complexes degradation rate constant                                    | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{cL}$          | \boldsymbol{cL}-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
 | $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bL}$          | bL-complexes degradation rate constant                                    | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bS}$          | bS-complexes degradation rate constant                                    | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bL}$          | \boldsymbol{bL}-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bS}$          | \boldsymbol{bS}-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.53              | 1/min       | $*$
 | $\lambda_{S}$     | SINE deactivation rate constant                                           | 2.47              | 1/min       | $*$
 | $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | $BNID:105879$
@@ -189,34 +189,33 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | $UCSS$
 | $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | $UCSS$
 
-### Table with Petersen Matrix (transposed stoichiometric matrix)
-| Process                                           | a                         | mq   | cq   | q    | mL   | mS   | cL   | O1   | bL   | bS   | L    | S    |
-| :---                                              | :---                      | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Energy supply                                     | 1                         |      |      |      |      |      |      |      |      |      |      |      |
-| Replication                                       | -1                        |      |      |      |      |      |      |      |      |      |      |      |
-| Transcription of housekeeping genes               | -1 $N_{nt}N_{Q}$          | 1    |      |      |      |      |      |      |      |      |      |      |
-| Transcription of LINE-1                           | -1 $N_{nt}N_{L}$          |      |      |      | 1    |      |      |      |      |      |      |      |
-| Transcription of SINE                             | -1 $N_{nt}N_{S}$          |      |      |      |      | 1    |      |      |      |      |      |      |
-| Ribosome binding with housekeeping genes RNA      |                           | -1   | 1    |      |      |      |      |      |      |      |      |      |
-| Ribosome binding with LINE-1 RNA                  |                           |      |      |      | -1   |      | 1    |      |      |      |      |      |
-| Ribosome unbinding housekeeping genes RNA         |                           | 1    | -1   |      |      |      |      |      |      |      |      |      |
-| Ribosome unbinding LINE-1 RNA                     |                           |      |      |      | 1    |      | -1   |      |      |      |      |      |
-| Translation of housekeeping genes RNAs            | -1 $N_{aa}N_{q}$          | 1    | -1   | 1    |      |      |      |      |      |      |      |      |
-| Translation of LINE-1 RNAs                        | -1 $N_{aa}\frac{N_{L}}{3}$|      |      |      |      |      | -1   | 1    | 1    |      |      |      |
-| Replacement $mL$ --> $mS$ in complex with $O_2$   |                           |      |      |      | 1    | -1   |      |      | -1   | 1    |      |      |
-| Replacement $mS$ --> $mL$ in complex with $O_2$   |                           |      |      |      | -1   | 1    |      |      | 1    | -1   |      |      |
-| Integration of LINE-1                             | -1 $N_{nt}N_{L}$          |      |      |      |      |      |      | -1   | -1   |      | 1    |      |
-| Integration of SINE                               | -1 $N_{nt}N_{S}$          |      |      |      |      |      |      |      |      | -1   |      | 1    |
-| ATP degradation                                   | -1                        |      |      |      |      |      |      |      |      |      |      |      |
-| $mq$ degradation                                  |                           | -1   |      |      |      |      |      |      |      |      |      |      |
-| $cq$ degradation                                  |                           |      | -1   |      |      |      |      |      |      |      |      |      |
-| housekeeping genes degradation                    |                           |      |      | -1   |      |      |      |      |      |      |      |      |
-| $mL$ degradation                                  |                           |      |      |      | -1   |      |      |      |      |      |      |      |
-| $mS$ degradation                                  |                           |      |      |      |      | -1   |      |      |      |      |      |      |
-| $cL$-complex degradation                          |                           |      |      |      |      |      | -1   |      |      |      |      |      |
-| $O_1$ degradation                                 |                           |      |      |      |      |      |      | -1   |      |      |      |      |
-| $bL$-complex degradation                          |                           |      |      |      |      |      |      |      | -1   |      |      |      |
-| $bS$-complex degradation                          |                           |      |      |      |      |      |      |      |      | -1   |      |      |
-| LINE-1 degradation                                |                           |      |      |      |      |      |      |      |      |      | -1   |      |
-| SINE degradation                                  |                           |      |      |      |      |      |      |      |      |      |      | -1   |
-
+### Petersen Matrix (transposed stoichiometric matrix)
+| Process                                           | a                                 | mq   | cq   | q    | mL   | mS   | cL   | O1   | bL   | bS   | L    | S    | Propensity                                                                    |
+| :---                                              | :---                              | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :---                                                                          |
+| Energy supply                                     | 1                                 |      |      |      |      |      |      |      |      |      |      |      | $A_0$                                                                         |
+| Replication                                       | -1                                |      |      |      |      |      |      |      |      |      |      |      | $v_{repl}(\boldsymbol{a},\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{bS})$   |
+| Transcription of housekeeping genes               | -1 $N_{nt}N_{Q}$                  | 1    |      |      |      |      |      |      |      |      |      |      | $\omega_{q}(\boldsymbol{a})$                                                  |
+| Transcription of LINE-1                           | -1 $N_{nt}N_{L}$                  |      |      |      | 1    |      |      |      |      |      |      |      | $\omega_{L}(\boldsymbol{L},\boldsymbol{a})$                                   |
+| Transcription of SINE                             | -1 $N_{nt}N_{S}$                  |      |      |      |      | 1    |      |      |      |      |      |      | $\omega_{S}(\boldsymbol{S},\boldsymbol{a})$                                   |
+| Ribosome binding with housekeeping genes RNA      |                                   | -1   | 1    |      |      |      |      |      |      |      |      |      | $k_{bq}f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\boldsymbol{mq}$               |
+| Ribosome binding with LINE-1 RNA                  |                                   |      |      |      | -1   |      | 1    |      |      |      |      |      | $k_{bL}f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\boldsymbol{mL}$               |
+| Ribosome unbinding housekeeping genes RNA         |                                   | 1    | -1   |      |      |      |      |      |      |      |      |      | $k_{uq}\boldsymbol{cq}$                                                       |
+| Ribosome unbinding LINE-1 RNA                     |                                   |      |      |      | 1    |      | -1   |      |      |      |      |      | $k_{uL}\boldsymbol{cL}$                                                       |
+| Translation of housekeeping genes RNAs            | -1 $N_{aa}N_{q}$              	| 1    | -1   | 1    |      |      |      |      |      |      |      |      | $v_{q}(\boldsymbol{cq},\boldsymbol{a})$                                       |
+| Translation of LINE-1 RNAs                        | -1 $N_{aa}\frac{N_{L}}{3}\quad$   |      |      |      |      |      | -1   | 1    | 1    |      |      |      | $v_{L}(\boldsymbol{cL},\boldsymbol{a})$                                       |
+| Replacement $mL$ --> $mS$ in complex with $O_2$   |                                   |      |      |      | 1    | -1   |      |      | -1   | 1    |      |      | $k_{sub_S}\boldsymbol{mS}\boldsymbol{bL}$                                     |
+| Replacement $mS$ --> $mL$ in complex with $O_2$   |                                   |      |      |      | -1   | 1    |      |      | 1    | -1   |      |      | $k_{sub_L}\boldsymbol{mL}\boldsymbol{bS}$                                     |
+| Integration of LINE-1                             | -1 $N_{nt}N_{L}$                  |      |      |      |      |      |      | -1   | -1   |      | 1    |      | $v_{int_L}(\boldsymbol{bL},\boldsymbol{01},\boldsymbol{a})$                   |
+| Integration of SINE                               | -1 $N_{nt}N_{S}$                  |      |      |      |      |      |      |      |      | -1   |      | 1    | $v_{int_S}(\boldsymbol{bS},\boldsymbol{a})$                                   |
+| ATP degradation                                   | -1                                |      |      |      |      |      |      |      |      |      |      |      | $\lambda_{a}\boldsymbol{a}$                                                   |
+| $mq$ degradation                                  |                                   | -1   |      |      |      |      |      |      |      |      |      |      | $d_{mq}\boldsymbol{mq}$                                                       |
+| $cq$ degradation                                  |                                   |      | -1   |      |      |      |      |      |      |      |      |      | $d_{cq}\boldsymbol{cq}$                                                       |
+| housekeeping genes degradation                    |                                   |      |      | -1   |      |      |      |      |      |      |      |      | $d_{q}\boldsymbol{q}$                                                         |
+| $mL$ degradation                                  |                                   |      |      |      | -1   |      |      |      |      |      |      |      | $d_{mL}\boldsymbol{mL}$                                                       |
+| $mS$ degradation                                  |                                   |      |      |      |      | -1   |      |      |      |      |      |      | $d_{mS}\boldsymbol{mS}$                                                       |
+| $cL$-complex degradation                          |                                   |      |      |      |      |      | -1   |      |      |      |      |      | $d_{cL}\boldsymbol{cL}$                                                       |
+| $O_1$ degradation                                 |                                   |      |      |      |      |      |      | -1   |      |      |      |      | $d_{O1}\boldsymbol{O1}$                                                       |
+| $bL$-complex degradation                          |                                   |      |      |      |      |      |      |      | -1   |      |      |      | $d_{bL}\boldsymbol{bL}$                                                       |
+| $bS$-complex degradation                          |                                   |      |      |      |      |      |      |      |      | -1   |      |      | $d_{bS}\boldsymbol{bS}$                                                       |
+| LINE-1 degradation                                |                                   |      |      |      |      |      |      |      |      |      | -1   |      | $\lambda_{L}\boldsymbol{L}$                                                   |
+| SINE degradation                                  |                                   |      |      |      |      |      |      |      |      |      |      | -1   | $\lambda_{S}\boldsymbol{S}$                                                   |
