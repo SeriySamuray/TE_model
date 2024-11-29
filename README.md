@@ -2,8 +2,17 @@
 This repository contains code with a model describing the basic biochemical processes in a cell in conditions of limited bioenergetic resources and competition for ATP and ribosomes from retrotransposons.
 The model separately considers the processes associated with housekeeping genes and two types of non-LTR retrotransposons: LINEs and SINEs.
 
-## Languages
-We use Jupiter notebooks for interactive charting.
+## Languages and description of contents
+We use Jupiter notebooks for interactive charting and calculations.
+Up to date (30.11.2024) repository contains following 8 notebooks:
+1. TE_model_det.ipynb - for a preliminary study of stationary solutions of the reference model (finding roots).
+2. TE_model_symbolic.ipynb - study of the stability of the found stationary solutions (of the reference model).
+3. TE_model_stochastic.ipynb - study the stochastic version of the reference model and plot graphs.
+4. TE_model_calc.ipynb - main notebook for plotting graphs (for a reference model).
+5. TE_model2_det.ipynb - for a preliminary study of stationary solutions of the modified model (assuming demethylation of a cell).
+6. TE_model2_symbolic.ipynb - study of the stability of the found stationary solutions (of the modified model).
+7. TE_model2_stochastic.ipynb - study the stochastic version of the modified model and plot graphs.
+8. TE_model_compare.ipynb - compare cell states for reference and modified models.
 
 ## Description of the mathematical model
 
@@ -137,19 +146,23 @@ $$
 #### Free ribosomes
 $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \boldsymbol{cL}$
 
-### Table with constants
+### Table with model parameters (reference model)
 | Designation       | Description                                                               | Value             | Unit        | Source  
 | :---              | :---                                                                      | :---              | :---        | :---      
+| $a_{wt}$          | characteristic number of ATP molecules in HeLa cell                       | $5.33·10^9$       | m.p.c.      | $BNID:104449$
+| $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | $UCSS$
+| $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | $UCSS$
 | $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | $BNID:101484$
-| $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                    | 3804              |             | $[3]$
-| $A_0$             | energy supply                                                             | $1.31·10^{10}$      | m.p.c./min  | $BNID:110879^1$
-| $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | $BNID:109393$
-| $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                          | 431               | aa          | $[4]$
-| $N_Q$             | median HeLa gen length (genes of $\boldsymbol{q}$)                          | 1300              | bp          | $[4]^2$
+| $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                  | 3804              |             | $[3]$
+| $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                        | 431               | aa          | $[4]$
+| $N_Q$             | median HeLa gen length (genes of $\boldsymbol{q}$)                        | 1300              | bp          | $[4]^2$
 | $N_L$             | LINE-1 length                                                             | 6000              | bp          | $[5]$
 | $N_S$             | SINE length                                                               | 300               | bp          | $[6]$
 | $N_{aa}$          | number of ATP molecules for adding one aa                                 | 5                 | m.p.c.      | $[7]$
 | $N_{nt}$          | number of ATP molecules for adding one nucleotide                         | 15                | m.p.c.      | $[7]$
+| $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | $BNID:109393$
+| $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | $BNID:107347$
+| $A_0$             | energy supply                                                             | $1.31·10^{10}$    | m.p.c./min  | $BNID:110879^1$
 | $\chi_{\max_L}$   | maximal integration elongation rate of one LINE-1 transposon base pair    | 840               | bp/min      | $[8]^3$
 | $\chi_{\max_S}$   | maximal integration elongation rate of one SINE transposon base pair      | 840               | bp/min      | $[8]$
 | $K_{\chi_L}$      | integration elongation threshold of one LINE-1 transposon                 | $1.1·10^7$        | m.p.c.      | $[8]^4$
@@ -163,31 +176,34 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $\theta_S$        | transcription threshold of one SINE                                       | $3.8·10^9$        | m.p.c.      | $BNID:111027$
 | $\gamma_{\max_q}$ | maximal translation rate of one aa from q-RNA                             | 300               | aa/min      | $BNID:104598^8$
 | $\gamma_{\max_L}$ | maximal translation rate of one aa from LINE-1 RNA                        | 300               | aa/min      | $BNID:104598$
-| $K_{\gamma_q}$    | translation threshold of one $\boldsymbol{q}$-RNA                           | 25900             | m.p.c.      | $[10]^9$
+| $K_{\gamma_q}$    | translation threshold of one $\boldsymbol{q}$-RNA                         | 25900             | m.p.c.      | $[10]^9$
 | $K_{\gamma_L}$    | translation threshold of one LINE-1 RNA                                   | 25900             | m.p.c.      | $[10]$
-| $k_{bq}$          | $\boldsymbol{cq}$-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
-| $k_{bL}$          | $\boldsymbol{cL}$-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
-| $k_{uq}$          | $\boldsymbol{cq}$-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
-| $k_{uL}$          | $\boldsymbol{cL}$-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
+| $k_{bq}$          | $\boldsymbol{cq}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | $*$
+| $k_{bL}$          | $\boldsymbol{cL}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | $*$
+| $k_{uq}$          | $\boldsymbol{cq}$-complexes unbinding rate constant                       | 0.01              | 1/min       | $*$
+| $k_{uL}$          | $\boldsymbol{cL}$-complexes unbinding rate constant                       | 0.01              | 1/min       | $*$
 | $k_{sub_S}$       | substitution of mL on mS rate constant in complex with ORF2p              | $5·10^{-8}$       | 1/min       | $*$
 | $k_{sub_L}$       | substitution of mS on mL rate constant in complex with ORF2p              | $5·10^{-6}$       | 1/min       | $*$
-| $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | $BNID:107347$
-| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
-| $d_{mq}$          | $\boldsymbol{q}$-RNAs degradation rate constant                             | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cq}$          | $\boldsymbol{cq}$-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
-| $d_{q}$           | $\boldsymbol{q}$ proteins degradation rate constant                         | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{mq}$          | $\boldsymbol{q}$-RNAs degradation rate constant                           | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
+| $d_{cq}$          | $\boldsymbol{cq}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{q}$           | $\boldsymbol{q}$ proteins degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $d_{mL}$          | LINE-1 RNAs degradation rate constant                                     | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
 | $d_{mS}$          | SINE RNAs degradation rate constant                                       | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cL}$          | $\boldsymbol{cL}$-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{cL}$          | $\boldsymbol{cL}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | $*$
 | $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
 | $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.53              | 1/min       | $*$
 | $\lambda_{S}$     | SINE deactivation rate constant                                           | 2.47              | 1/min       | $*$
 | $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | $BNID:105879$
-| $a_{wt}$          | characteristic number of ATP molecules in HeLa cell                       | $5.33·10^9$       | m.p.c.      | $BNID:104449$
-| $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | $UCSS$
-| $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | $UCSS$
+
+### Table with modified parameters (relative to the reference model)
+| Designation       | Description                                                               | Value             | Unit        | Source  
+| :---              | :---                                                                      | :---              | :---        | :---      
+| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
+| $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.53              | 1/min       | $*$
+| $\lambda_{S}$     | SINE deactivation rate constant                                           | 2.47              | 1/min       | $*$
 
 ### Petersen Matrix (transposed stoichiometric matrix)
 | Process                                           | a                                 | mq   | cq   | q    | mL   | mS   | cL   | O1   | bL   | bS   | L    | S    |
@@ -219,3 +235,4 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $bS$-complex degradation                          |                                   |      |      |      |      |      |      |      |      | -1   |      |      |
 | LINE-1 degradation                                |                                   |      |      |      |      |      |      |      |      |      | -1   |      |
 | SINE degradation                                  |                                   |      |      |      |      |      |      |      |      |      |      | -1   |
+
