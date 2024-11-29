@@ -4,15 +4,15 @@ The model separately considers the processes associated with housekeeping genes 
 
 ## Languages and description of contents
 We use Jupiter notebooks for interactive charting and calculations.
-Up to date (30.11.2024) repository contains following 8 notebooks:
-1. TE_model_det.ipynb - for a preliminary study of stationary solutions of the reference model (finding roots).
-2. TE_model_symbolic.ipynb - study of the stability of the found stationary solutions (of the reference model).
-3. TE_model_stochastic.ipynb - study the stochastic version of the reference model and plot graphs.
-4. TE_model_calc.ipynb - main notebook for plotting graphs (for a reference model).
-5. TE_model2_det.ipynb - for a preliminary study of stationary solutions of the modified model (assuming demethylation of a cell).
-6. TE_model2_symbolic.ipynb - study of the stability of the found stationary solutions (of the modified model).
-7. TE_model2_stochastic.ipynb - study the stochastic version of the modified model and plot graphs.
-8. TE_model_compare.ipynb - compare cell states for reference and modified models.
+Up to date **(30.11.2024)** repository contains following 8 notebooks:
+1. **TE_model_det.ipynb** - for a preliminary study of stationary solutions of the reference model (finding roots).
+2. **TE_model_symbolic.ipynb** - study of the stability of the found stationary solutions (of the reference model).
+3. **TE_model_stochastic.ipynb** - study the stochastic version of the reference model and plot graphs.
+4. **TE_model_calc.ipynb** - main notebook for plotting graphs (for a reference model).
+5. **TE_model2_det.ipynb** - for a preliminary study of stationary solutions of the modified model (assuming demethylation of a cell).
+6. **TE_model2_symbolic.ipynb** - study of the stability of the found stationary solutions (of the modified model).
+7. **TE_model2_stochastic.ipynb** - study the stochastic version of the modified model and plot graphs.
+8. **TE_model_compare.ipynb** - compare cell states for reference and modified models.
 
 ## Description of the mathematical model
 
