@@ -2,9 +2,9 @@
 This repository contains code with a model describing the basic biochemical processes in a cell in conditions of limited bioenergetic resources and competition for ATP and ribosomes from retrotransposons.
 The model separately considers the processes associated with housekeeping genes and two types of non-LTR retrotransposons: LINEs and SINEs.
 
-## Languages and description of contents
+## Language and description of contents
 We use Jupiter notebooks for interactive charting and calculations.
-Up to date **(30.11.2024)** repository contains following 8 notebooks:
+Up to date **(30.11.2024)** this repository contains following 8 notebooks:
 1. **TE_model_det.ipynb** - for a preliminary study of stationary solutions of the reference model (finding roots).
 2. **TE_model_symbolic.ipynb** - study of the stability of the found stationary solutions (of the reference model).
 3. **TE_model_stochastic.ipynb** - study the stochastic version of the reference model and plot graphs.
