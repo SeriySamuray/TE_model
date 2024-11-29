@@ -141,11 +141,11 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | Designation       | Description                                                               | Value             | Unit        | Source  
 | :---              | :---                                                                      | :---              | :---        | :---      
 | $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | $BNID:101484$
-| $Q$               | number of housekeeping genes (genes of \boldsymbol{q})                    | 3804              |             | $[3]$
+| $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                    | 3804              |             | $[3]$
 | $A_0$             | energy supply                                                             | $1.31·10^{10}$      | m.p.c./min  | $BNID:110879^1$
 | $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | $BNID:109393$
-| $N_q$             | median HeLa cell protein length (\boldsymbol{q})                          | 431               | aa          | $[4]$
-| $N_Q$             | median HeLa gen length (genes of \boldsymbol{q})                          | 1300              | bp          | $[4]^2$
+| $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                          | 431               | aa          | $[4]$
+| $N_Q$             | median HeLa gen length (genes of $\boldsymbol{q}$)                          | 1300              | bp          | $[4]^2$
 | $N_L$             | LINE-1 length                                                             | 6000              | bp          | $[5]$
 | $N_S$             | SINE length                                                               | 300               | bp          | $[6]$
 | $N_{aa}$          | number of ATP molecules for adding one aa                                 | 5                 | m.p.c.      | $[7]$
@@ -163,25 +163,25 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $\theta_S$        | transcription threshold of one SINE                                       | $3.8·10^9$        | m.p.c.      | $BNID:111027$
 | $\gamma_{\max_q}$ | maximal translation rate of one aa from q-RNA                             | 300               | aa/min      | $BNID:104598^8$
 | $\gamma_{\max_L}$ | maximal translation rate of one aa from LINE-1 RNA                        | 300               | aa/min      | $BNID:104598$
-| $K_{\gamma_q}$    | translation threshold of one \boldsymbol{q}-RNA                           | 25900             | m.p.c.      | $[10]^9$
+| $K_{\gamma_q}$    | translation threshold of one $\boldsymbol{q}$-RNA                           | 25900             | m.p.c.      | $[10]^9$
 | $K_{\gamma_L}$    | translation threshold of one LINE-1 RNA                                   | 25900             | m.p.c.      | $[10]$
-| $k_{bq}$          | \boldsymbol{cq}-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
-| $k_{bL}$          | \boldsymbol{cL}-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
-| $k_{uq}$          | \boldsymbol{cq}-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
-| $k_{uL}$          | \boldsymbol{cL}-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
+| $k_{bq}$          | $\boldsymbol{cq}$-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
+| $k_{bL}$          | $\boldsymbol{cL}$-complexes (RNA+ribosome) binding rate constant            | $5·10^{-8}$       | 1/min       | $*$
+| $k_{uq}$          | $\boldsymbol{cq}$-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
+| $k_{uL}$          | $\boldsymbol{cL}$-complexes unbinding rate constant                         | 0.01              | 1/min       | $*$
 | $k_{sub_S}$       | substitution of mL on mS rate constant in complex with ORF2p              | $5·10^{-8}$       | 1/min       | $*$
 | $k_{sub_L}$       | substitution of mS on mL rate constant in complex with ORF2p              | $5·10^{-6}$       | 1/min       | $*$
 | $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | $BNID:107347$
 | $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
-| $d_{mq}$          | \boldsymbol{q}-RNAs degradation rate constant                             | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cq}$          | \boldsymbol{cq}-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
-| $d_{q}$           | \boldsymbol{q} proteins degradation rate constant                         | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{mq}$          | $\boldsymbol{q}$-RNAs degradation rate constant                             | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
+| $d_{cq}$          | $\boldsymbol{cq}$-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{q}$           | $\boldsymbol{q}$ proteins degradation rate constant                         | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $d_{mL}$          | LINE-1 RNAs degradation rate constant                                     | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
 | $d_{mS}$          | SINE RNAs degradation rate constant                                       | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cL}$          | \boldsymbol{cL}-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
+| $d_{cL}$          | $\boldsymbol{cL}$-complexes degradation rate constant                       | $1.55·10^{-3}$    | 1/min       | $*$
 | $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bL}$          | \boldsymbol{bL}-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bS}$          | \boldsymbol{bS}-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
+| $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.53              | 1/min       | $*$
 | $\lambda_{S}$     | SINE deactivation rate constant                                           | 2.47              | 1/min       | $*$
 | $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | $BNID:105879$
