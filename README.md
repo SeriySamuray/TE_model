@@ -4,7 +4,7 @@ The model separately considers the processes associated with housekeeping genes 
 
 ## Language and description of contents
 We use Jupiter notebooks for interactive charting and calculations.
-Up to date **(30.11.2024)** this repository contains following 8 notebooks:
+Up to date **(30.11.2024)** this repository contains following 5 notebooks:
 1. **TE_model_det.ipynb** - for a preliminary study of stationary solutions (finding roots).
 2. **TE_model_symbolic.ipynb** - study of the stability of the found stationary solutions.
 3. **TE_model_stochastic.ipynb** - study the stochastic version of the model and plot graphs.
