@@ -190,9 +190,9 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 | $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
 | $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | $2.04·10^{-3}$    | 1/min       | $*$
-| $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.53              | 1/min       | $*$
-| $\lambda_{S}$     | SINE deactivation rate constant                                           | 2.47              | 1/min       | $*$
+| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | 1.47              | 1/min       | $*$
+| $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.37              | 1/min       | $*$
+| $\lambda_{S}$     | SINE deactivation rate constant                                           | 1.18              | 1/min       | $*$
 | $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | $BNID:105879$
 
 ### Table with modified parameters (relative to the reference model)
