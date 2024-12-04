@@ -4,12 +4,15 @@ The model separately considers the processes associated with housekeeping genes 
 
 ## Language and description of contents
 We use Jupiter notebooks for interactive charting and calculations.
-Up to date **(30.11.2024)** this repository contains following 5 notebooks:
+Up to date **(04.12.2024)** this repository contains following 5 notebooks:
 1. **TE_model_det.ipynb** - for a preliminary study of stationary solutions (finding roots).
 2. **TE_model_symbolic.ipynb** - study of the stability of the found stationary solutions.
 3. **TE_model_stochastic.ipynb** - study the stochastic version of the model and plot graphs.
 4. **TE_model_calc.ipynb** - main notebook for plotting graphs.
 5. **TE_model_compare.ipynb** - compare cell states for reference and modified (assuming demethylation) models.
+
+Folder **stat_sols/** contains data with changable model parameters and stationary solutions.
+These are **.py** scripts (one script per model), executed from Jupiter notebooks.
 
 ## Description of the mathematical model
 
@@ -204,37 +207,24 @@ $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \b
 
 ### Stationary solutions
 
-#### Reference model
-| Designation       | Active transposons    | Knock out SINE        | Knock out SINE & LINE-1   | Active transposons, $\lambda_{L}/2$   |
-| :---              | :---                  | :---                  | :---                      | :---                                  |
-| $\boldsymbol{a}$  | 5.32028879e+09        | 2.29529555e+09        | 5.96205458e+09            | 3.60500385e+09                        |
-| $\boldsymbol{mq}$ | 5.43892043e+06        | 3.36327244e+06        | 5.69819032e+06            | 4.52734948e+06                        |
-| $\boldsymbol{cq}$ | 2.60750605e+06        | 1.79282544e+06        | 2.72706015e+06            | 2.18479470e+06                        |
-| $\boldsymbol{q}$  | 3.20098867e+09        | 2.20086818e+09        | 3.34775568e+09            | 2.68205969e+09                        |
-| $\boldsymbol{mL}$ | 5.13241818e+04        | 6.99550598e+04        | 0                         | 2.29815368e+05                        |
-| $\boldsymbol{mS}$ | 1.21841508e+08        | 0                     | 0                         | 4.55392447e+08                        |
-| $\boldsymbol{cL}$ | 1.07775213e+05        | 1.63334967e+05        | 0                         | 4.85769072e+05                        |
-| $\boldsymbol{O_1}$| 2.78154330e+07        | 1.75569280e+05        | 0                         | 1.27407054e+08                        |
-| $\boldsymbol{bL}$ | 2.82625278e+03        | 1.75569280e+05        | 0                         | 4.47819184e+03                        |
-| $\boldsymbol{bS}$ | 5.64255248e+03        | 0                     | 0                         | 2.58724875e+04                        |
-| $\boldsymbol{L}$  | 1.06716935e+03        | 6.59470834e+04        | 0                         | 3.37858095e+03                        |
-| $\boldsymbol{S}$  | 1.33614820e+04        | 0                     | 0                         | 6.12055856e+04                        |
+#### Reference model (ATP value from literature)
+| Designation       | Active transposons    | Knock out SINE        | Knock out SINE & LINE-1   | Active transposons, $\lambda_{L}/2$   | Active transposons, $\lambda_{L}/2$ & $\lambda_{S}/2$ |
+| :---              | :---                  | :---                  | :---                      | :---                                  | :---                                                  |
+| $\boldsymbol{a}$  | 5.32028879e+09        | 2.29529555e+09        | 5.96205458e+09            | 3.60500385e+09                        | 4.27240077e+09                                        |
+| $\boldsymbol{mq}$ | 5.43892043e+06        | 3.36327244e+06        | 5.69819032e+06            | 4.52734948e+06                        | 4.89876923e+06                                        |
+| $\boldsymbol{cq}$ | 2.60750605e+06        | 1.79282544e+06        | 2.72706015e+06            | 2.18479470e+06                        | 2.39235807e+06                                        |
+| $\boldsymbol{q}$  | 3.20098867e+09        | 2.20086818e+09        | 3.34775568e+09            | 2.68205969e+09                        | 2.93686833e+09                                        |
+| $\boldsymbol{mL}$ | 5.13241818e+04        | 6.99550598e+04        | 0                         | 2.29815368e+05                        | 9.18023587e+04                                        |
+| $\boldsymbol{mS}$ | 1.21841508e+08        | 0                     | 0                         | 4.55392447e+08                        | 4.30559873e+08                                        |
+| $\boldsymbol{cL}$ | 1.07775213e+05        | 1.63334967e+05        | 0                         | 4.85769072e+05                        | 1.96370953e+05                                        |
+| $\boldsymbol{O_1}$| 2.78154330e+07        | 1.75569280e+05        | 0                         | 1.27407054e+08                        | 5.15602878e+07                                        |
+| $\boldsymbol{bL}$ | 2.82625278e+03        | 1.75569280e+05        | 0                         | 4.47819184e+03                        | 1.58108214e+03                                        |
+| $\boldsymbol{bS}$ | 5.64255248e+03        | 0                     | 0                         | 2.58724875e+04                        | 1.04653946e+04                                        |
+| $\boldsymbol{L}$  | 1.06716935e+03        | 6.59470834e+04        | 0                         | 3.37858095e+03                        | 1.19341160e+03                                        |
+| $\boldsymbol{S}$  | 1.33614820e+04        | 0                     | 0                         | 6.12055856e+04                        | 4.95387336e+04                                        |
 
-#### Modified model (assuming demethylation)
-| Designation       | Active transposons    | Knock out SINE        | Knock out SINE & LINE-1   | Active transposons, $\lambda_{L}/2$   |
-| :---              | :---                  | :---                  | :---                      | :---                                  |
-| $\boldsymbol{a}$  | 2.40931696e+12        | 4.45330083e+09        | 5.77673751e+09            | 1.09450724e+10                        |
-| $\boldsymbol{mq}$ | 1.01120553e+07        | 5.01078199e+06        | 9.84214464e+04            | 7.49307879e+06                        |
-| $\boldsymbol{cq}$ | 3.86703330e+06        | 2.42674665e+06        | 6.79595113e+06            | 2.89337860e+06                        |
-| $\boldsymbol{q}$  | 4.74721425e+09        | 2.97908462e+09        | 8.34274993e+09            | 3.55193626e+09                        |
-| $\boldsymbol{mL}$ | 1.31903161e+05        | 1.03404963e+05        | 0                         | 6.75168280e+05                        |
-| $\boldsymbol{mS}$ | 2.00641730e+08        | 0                     | 0                         | 7.39911436e+08                        |
-| $\boldsymbol{cL}$ | 2.20941873e+05        | 2.19353478e+05        | 0                         | 1.14193475e+06                        |
-| $\boldsymbol{O_1}$| 5.74596157e+07        | 2.35091844e+05        | 0                         | 2.99599256e+08                        |
-| $\boldsymbol{bL}$ | 4.01203844e+03        | 2.35091844e+05        | 0                         | 1.01318289e+04                        |
-| $\boldsymbol{bS}$ | 1.16324573e+04        | 0                     | 0                         | 6.07154616e+04                        |
-| $\boldsymbol{L}$  | 1.05977067e+03        | 6.18293081e+04        | 0                         | 5.34728221e+03                        |
-| $\boldsymbol{S}$  | 1.31865310e+04        | 0                     | 0                         | 6.87581407e+04                        |
+#### Nota bene
+Stationary solutions and changable parameters for other models can be found in **.py** scripts in **stat_sols/** folder. 
 
 
 ### Petersen Matrix (transposed stoichiometric matrix)
