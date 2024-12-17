@@ -147,56 +147,59 @@ $$
 $\quad f_{rib}(\boldsymbol{cq},\boldsymbol{cL}) = r_{tot} - \boldsymbol{cq} - \boldsymbol{cL}$
 
 ### Table with model parameters (reference model)
+Parameter values in the model under normal conditions. BNID denotes the record number in the Bionumbers biological parameter database (https://bionumbers.hms.harvard.edu).  
+UCSC denotes the University of California Santa Cruz Genome Browser (https://genome.ucsc.edu/).   
+Asterisk (*) denotes free parameters whose values were found by model fitting. 
 | Designation       | Description                                                               | Value             | Unit        | Source  
 | :---              | :---                                                                      | :---              | :---        | :---      
-| $a_{wt}$          | characteristic number of ATP molecules in HeLa cell                       | $5.33·10^9$       | m.p.c.      | $BNID:104449$
-| $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | $UCSS$
-| $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | $UCSS$
-| $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | $BNID:101484$
-| $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                  | 3804              |             | $[3]$
-| $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                        | 431               | aa          | $[4]$
-| $N_Q$             | median HeLa gen length (genes of $\boldsymbol{q}$)                        | 1300              | bp          | $[4]^2$
-| $N_L$             | LINE-1 length                                                             | 6000              | bp          | $[5]$
-| $N_S$             | SINE length                                                               | 300               | bp          | $[6]$
-| $N_{aa}$          | number of ATP molecules for adding one aa                                 | 5                 | m.p.c.      | $[7]$
-| $N_{nt}$          | number of ATP molecules for adding one nucleotide                         | 15                | m.p.c.      | $[7]$
-| $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | $BNID:109393$
-| $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | $BNID:107347$
-| $A_0$             | energy supply                                                             | $1.31·10^{10}$    | m.p.c./min  | $BNID:110879^1$
-| $\chi_{\max_L}$   | maximal integration elongation rate of one LINE-1 transposon base pair    | 840               | bp/min      | $[8]^3$
-| $\chi_{\max_S}$   | maximal integration elongation rate of one SINE transposon base pair      | 840               | bp/min      | $[8]$
-| $K_{\chi_L}$      | integration elongation threshold of one LINE-1 transposon                 | $1.1·10^7$        | m.p.c.      | $[8]^4$
-| $K_{\chi_S}$      | integration elongation threshold of one SINE transposon                   | $1.1·10^7$        | m.p.c.      | $[8]$
-| $K_L$             | association constant of LINE-1 mRNA with ORF1p                            | $2.24·10^{-3}$    | 1/m.p.c.    | $[9]^5$
-| $w_q$             | maximal transcription rate of one housekeeping gene                       | 4.64              | m.p.c./min  | $BNID:111721^6$
-| $w_L$             | maximal transcription rate of one LINE-1                                  | 1                 | m.p.c./min  | $BNID:111721$
-| $w_S$             | maximal transcription rate of one SINE                                    | 20                | m.p.c./min  | $BNID:111721$
-| $\theta_q$        | transcription threshold of one housekeeping gene                          | $3.8·10^9$        | m.p.c.      | $BNID:111027^7$
-| $\theta_L$        | transcription threshold of one LINE-1                                     | $3.8·10^9$        | m.p.c.      | $BNID:111027$
-| $\theta_S$        | transcription threshold of one SINE                                       | $3.8·10^9$        | m.p.c.      | $BNID:111027$
-| $\gamma_{\max_q}$ | maximal translation rate of one aa from q-RNA                             | 300               | aa/min      | $BNID:104598^8$
-| $\gamma_{\max_L}$ | maximal translation rate of one aa from LINE-1 RNA                        | 300               | aa/min      | $BNID:104598$
-| $K_{\gamma_q}$    | translation threshold of one $\boldsymbol{q}$-RNA                         | 25900             | m.p.c.      | $[10]^9$
-| $K_{\gamma_L}$    | translation threshold of one LINE-1 RNA                                   | 25900             | m.p.c.      | $[10]$
-| $k_{bq}$          | $\boldsymbol{cq}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | $*$
-| $k_{bL}$          | $\boldsymbol{cL}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | $*$
-| $k_{uq}$          | $\boldsymbol{cq}$-complexes unbinding rate constant                       | 0.01              | 1/min       | $*$
-| $k_{uL}$          | $\boldsymbol{cL}$-complexes unbinding rate constant                       | 0.01              | 1/min       | $*$
-| $k_{sub_S}$       | substitution of mL on mS rate constant in complex with ORF2p              | $5·10^{-8}$       | 1/min       | $*$
-| $k_{sub_L}$       | substitution of mS on mL rate constant in complex with ORF2p              | $5·10^{-6}$       | 1/min       | $*$
-| $d_{mq}$          | $\boldsymbol{q}$-RNAs degradation rate constant                           | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cq}$          | $\boldsymbol{cq}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | $*$
-| $d_{q}$           | $\boldsymbol{q}$ proteins degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{mL}$          | LINE-1 RNAs degradation rate constant                                     | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{mS}$          | SINE RNAs degradation rate constant                                       | $1.15·10^{-3}$    | 1/min       | $BNID:104747$
-| $d_{cL}$          | $\boldsymbol{cL}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | $*$
-| $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | $BNID:112253$
-| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | 1.47              | 1/min       | $*$
-| $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.37              | 1/min       | $*$
-| $\lambda_{S}$     | SINE deactivation rate constant                                           | 1.18              | 1/min       | $*$
-| $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | $BNID:105879$
+| $a_{wt}$          | characteristic number of ATP molecules in HeLa cell                       | $5.33·10^9$       | m.p.c.      | BNID:104449
+| $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | UCSS
+| $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | UCSS
+| $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | BNID:101484
+| $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                  | 3804              |             | [1]
+| $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                        | 431               | aa          | [2]
+| $N_Q$             | median HeLa gen length (genes of $\boldsymbol{q}$)                        | 1300              | bp          | [2]
+| $N_L$             | LINE-1 length                                                             | 6000              | bp          | [3]
+| $N_S$             | SINE length                                                               | 300               | bp          | [4]
+| $N_{aa}$          | number of ATP molecules for adding one aa                                 | 5                 | m.p.c.      | [5]
+| $N_{nt}$          | number of ATP molecules for adding one nucleotide                         | 15                | m.p.c.      | [5]
+| $\tau$            | HeLa cell cycle duration                                                  | 1320              | min         | BNID:109393
+| $r_{tot}$         | total number of ribosomes                                                 | $9.5·10^6$        | m.p.c.      | BNID:107347
+| $A_0$             | energy supply                                                             | $1.31·10^{10}$    | m.p.c./min  | BNID:110879
+| $\chi_{\max_L}$   | maximal integration elongation rate of one LINE-1 transposon base pair    | 840               | bp/min      | [6]
+| $\chi_{\max_S}$   | maximal integration elongation rate of one SINE transposon base pair      | 840               | bp/min      | [6]
+| $K_{\chi_L}$      | integration elongation threshold of one LINE-1 transposon                 | $1.1·10^7$        | m.p.c.      | [6]
+| $K_{\chi_S}$      | integration elongation threshold of one SINE transposon                   | $1.1·10^7$        | m.p.c.      | [6]
+| $K_L$             | association constant of LINE-1 mRNA with ORF1p                            | $2.24·10^{-3}$    | 1/m.p.c.    | [7]
+| $w_q$             | maximal transcription rate of one housekeeping gene                       | 4.64              | m.p.c./min  | BNID:111721
+| $w_L$             | maximal transcription rate of one LINE-1                                  | 1                 | m.p.c./min  | BNID:111721
+| $w_S$             | maximal transcription rate of one SINE                                    | 20                | m.p.c./min  | BNID:111721
+| $\theta_q$        | transcription threshold of one housekeeping gene                          | $3.8·10^9$        | m.p.c.      | BNID:111027
+| $\theta_L$        | transcription threshold of one LINE-1                                     | $3.8·10^9$        | m.p.c.      | BNID:111027
+| $\theta_S$        | transcription threshold of one SINE                                       | $3.8·10^9$        | m.p.c.      | BNID:111027
+| $\gamma_{\max_q}$ | maximal translation rate of one aa from q-RNA                             | 300               | aa/min      | BNID:104598
+| $\gamma_{\max_L}$ | maximal translation rate of one aa from LINE-1 RNA                        | 300               | aa/min      | BNID:104598
+| $K_{\gamma_q}$    | translation threshold of one $\boldsymbol{q}$-RNA                         | 25900             | m.p.c.      | [8]
+| $K_{\gamma_L}$    | translation threshold of one LINE-1 RNA                                   | 25900             | m.p.c.      | [8]
+| $k_{bq}$          | $\boldsymbol{cq}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | *
+| $k_{bL}$          | $\boldsymbol{cL}$-complexes (RNA+ribosome) binding rate constant          | $5·10^{-8}$       | 1/min       | *
+| $k_{uq}$          | $\boldsymbol{cq}$-complexes unbinding rate constant                       | 0.01              | 1/min       | *
+| $k_{uL}$          | $\boldsymbol{cL}$-complexes unbinding rate constant                       | 0.01              | 1/min       | *
+| $k_{sub_S}$       | substitution of mL on mS rate constant in complex with ORF2p              | $5·10^{-8}$       | 1/min       | *
+| $k_{sub_L}$       | substitution of mS on mL rate constant in complex with ORF2p              | $5·10^{-6}$       | 1/min       | *
+| $d_{mq}$          | $\boldsymbol{q}$-RNAs degradation rate constant                           | $1.15·10^{-3}$    | 1/min       | BNID:104747
+| $d_{cq}$          | $\boldsymbol{cq}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | *
+| $d_{q}$           | $\boldsymbol{q}$ proteins degradation rate constant                       | $5.67·10^{-4}$    | 1/min       | BNID:112253
+| $d_{mL}$          | LINE-1 RNAs degradation rate constant                                     | $1.15·10^{-3}$    | 1/min       | BNID:104747
+| $d_{mS}$          | SINE RNAs degradation rate constant                                       | $1.15·10^{-3}$    | 1/min       | BNID:104747
+| $d_{cL}$          | $\boldsymbol{cL}$-complexes degradation rate constant                     | $1.55·10^{-3}$    | 1/min       | *
+| $d_{O1}$          | ORF1p degradation rate constant                                           | $5.67·10^{-4}$    | 1/min       | BNID:112253
+| $d_{bL}$          | $\boldsymbol{bL}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | BNID:112253
+| $d_{bS}$          | $\boldsymbol{bS}$-complexes degradation rate constant                     | $5.67·10^{-4}$    | 1/min       | BNID:112253
+| $\lambda_{a}$     | ATP molecules degradation rate constant                                   | 1.47              | 1/min       | *
+| $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.37              | 1/min       | *
+| $\lambda_{S}$     | SINE deactivation rate constant                                           | 1.18              | 1/min       | *
+| $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | BNID:105879
 
 ### Table with modified parameters (relative to the reference model)
 | Designation       | Description                                                               | Value             | Unit        | Source  
@@ -257,3 +260,20 @@ Stationary solutions and changable parameters for other models can be found in *
 | $bS$-complex degradation                          |                                   |      |      |      |      |      |      |      |      | -1   |      |      |
 | LINE-1 degradation                                |                                   |      |      |      |      |      |      |      |      |      | -1   |      |
 | SINE degradation                                  |                                   |      |      |      |      |      |      |      |      |      |      | -1   |
+
+### Funding sources
+The research was supported by the Russian Science Foundation grant No. 23-24-00153, https://rscf.ru/project/23-24-00153/.
+
+### Affiliations
+Peter the Great St.Petersburg Polytechnic University (SPbPU).
+Centre for Computational Biology: https://compbio.ru/
+
+### References
+1.    Eisenberg, E.; Levanon, E.Y. Human Housekeeping Genes, Revisited. Trends Genet 2013, 29, 569–574, doi:10.1016/j.tig.2013.05.010.
+2.    Milo, R.; Phillips, R. Cell Biology by the Numbers; 0 ed.; Garland Science, 2015; ISBN 978-1-317-23069-4.
+3.    Scott, A.F.; Schmeckpeper, B.J.; Abdelrazik, M.; Comey, C.T.; O’Hara, B.; Rossiter, J.P.; Cooley, T.; Heath, P.; Smith, K.D.; Margolet, L. Origin of the Human L1 Elements: Proposed Progenitor Genes Deduced from a Consensus DNA Sequence. Genomics 1987, 1, 113–125, doi:10.1016/0888-7543(87)90003-6.
+4.    Batzer, M.A.; Deininger, P.L. Alu Repeats and Human Genomic Diversity. Nat Rev Genet 2002, 3, 370–379, doi:10.1038/nrg798.
+5. 	Phillips, R.; Kondev, J.; Theriot, J.; Garcia, H. Physical Biology of the Cell; 2nd ed.; Garland Science: New York, 2012; ISBN 978-0-429-16883-3.
+6. 	Human Immunodeficiency Virus Reverse Transcriptase: Steady-State and Pre-Steady-State Kinetics of Nucleotide Incorporation - PubMed Available online: https://pubmed.ncbi.nlm.nih.gov/1374638/ (accessed on 3 April 2024).
+7. 	Reddy, B.; Yin, J. Quantitative Intracellular Kinetics of HIV Type 1. AIDS research and human retroviruses 1999, 15, 273–283, doi:10.1089/088922299311457.
+8.    Weiße, A.Y.; Oyarzún, D.A.; Danos, V.; Swain, P.S. Mechanistic Links between Cellular Trade-Offs, Gene Expression, and Growth. Proc Natl Acad Sci U S A 2015, 112, E1038-1047, doi:10.1073/pnas.1416533112.
