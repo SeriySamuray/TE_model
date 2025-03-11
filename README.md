@@ -42,7 +42,7 @@ These are **.py** scripts (one script per model), executed from Jupiter notebook
    v_{repl}(\boldsymbol{a},\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{bS}) -
    N_{nt} \left(N_{Q}\omega_{q}(\boldsymbol{a}) + N_{L}\omega_{L}(\boldsymbol{L},\boldsymbol{a}) + N_{S}\omega_{S}(\boldsymbol{S},\boldsymbol{a})\right) - && \\
    & \qquad \qquad N_{aa} \left(N_{q}v_{q}(\boldsymbol{cq},\boldsymbol{a}) + \frac{N_L}{3}v_L(\boldsymbol{cL},\boldsymbol{a})\right) -
-   N_{nt} \left(N_{L}v_{int_L}(\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{a}) + N_{S}v_{int_S}(\boldsymbol{bL},\boldsymbol{a})\right) && \\
+   N_{nt} \left(N_{L}v_{int_L}(\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{a}) + N_{S}v_{int_S}(\boldsymbol{bS},\boldsymbol{a})\right) && \\
 
 & 2. \quad \frac{\boldsymbol{dmq}}{\boldsymbol{dt}} = \omega_{q}(\boldsymbol{a}) - k_{bq}\:f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\:\boldsymbol{mq} +
    v_{q}(\boldsymbol{cq},\boldsymbol{a}) + k_{uq}\boldsymbol{cq} - d_{mq}\boldsymbol{mq} && \\
@@ -88,8 +88,8 @@ These are **.py** scripts (one script per model), executed from Jupiter notebook
 | Energy supply                                     | $\emptyset\xrightarrow{A_0}\boldsymbol{a}\quad$                                                                               | $A_0$                                                                         |
 | Replication                                       | $\boldsymbol{a}\xrightarrow{v_{repl}(\boldsymbol{a},\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{bS})}\emptyset\quad$         | $v_{repl}(\boldsymbol{a},\boldsymbol{bL},\boldsymbol{O_1},\boldsymbol{bS})$   |
 | Transcription of housekeeping genes               | $\emptyset\xrightarrow{\omega_q(\boldsymbol{a})}\boldsymbol{mq}\quad$                                                         | $\omega_{q}(\boldsymbol{a})$                                                  |
-| Transcription of LINE-1                           | $\boldsymbol{L}\xrightarrow{\omega_L(\boldsymbol{L},\boldsymbol{a})}\boldsymbol{L}+\boldsymbol{mL}\quad$                                          | $\omega_{L}(\boldsymbol{L},\boldsymbol{a})$                                   |
-| Transcription of SINE                             | $\boldsymbol{S}\xrightarrow{\omega_S(\boldsymbol{S},\boldsymbol{a})}\boldsymbol{S}+\boldsymbol{mS}\quad$                                          | $\omega_{S}(\boldsymbol{S},\boldsymbol{a})$                                   |
+| Transcription of LINE-1                           | $\boldsymbol{L}\xrightarrow{\omega_L(\boldsymbol{L},\boldsymbol{a})}\boldsymbol{L}+\boldsymbol{mL}\quad$                      | $\omega_{L}(\boldsymbol{L},\boldsymbol{a})$                                   |
+| Transcription of SINE                             | $\boldsymbol{S}\xrightarrow{\omega_S(\boldsymbol{S},\boldsymbol{a})}\boldsymbol{S}+\boldsymbol{mS}\quad$                      | $\omega_{S}(\boldsymbol{S},\boldsymbol{a})$                                   |
 | Ribosome binding with housekeeping genes RNA      | $\boldsymbol{mq}+f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\xrightarrow{k_{bq}}\boldsymbol{cq}\quad$                            | $k_{bq}f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\boldsymbol{mq}$               |
 | Ribosome binding with LINE-1 RNA                  | $\boldsymbol{mL}+f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\xrightarrow{k_{bL}}\boldsymbol{cL}\quad$                            | $k_{bL}f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\boldsymbol{mL}$               |
 | Ribosome unbinding housekeeping genes RNA         | $\boldsymbol{mq}+f_{rib}(\boldsymbol{cq},\boldsymbol{cL})\xleftarrow{k_{uq}}\boldsymbol{cq}\quad$                             | $k_{uq}\boldsymbol{cq}$                                                       |
@@ -155,6 +155,7 @@ Asterisk (*) denotes free parameters whose values were found by model fitting.
 | $a_{wt}$          | characteristic number of ATP molecules in HeLa cell                       | $5.33·10^9$       | m.p.c.      | BNID:104449
 | $L_{wt}$          | characteristic number of active LINE-1 in HeLa cell                       | 1064              | m.p.c.      | UCSS
 | $S_{wt}$          | characteristic number of active SINE in HeLa cell                         | 13243             | m.p.c.      | UCSS
+| $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | BNID:105879
 | $N_g$             | total genome size                                                         | $3.08·10^9$       | bp          | BNID:101484
 | $Q$               | number of housekeeping genes (genes of $\boldsymbol{q}$)                  | 3804              |             | [1]
 | $N_q$             | median HeLa cell protein length ($\boldsymbol{q}$)                        | 431               | aa          | [2]
@@ -199,7 +200,6 @@ Asterisk (*) denotes free parameters whose values were found by model fitting.
 | $\lambda_{a}$     | ATP molecules degradation rate constant                                   | 1.47              | 1/min       | *
 | $\lambda_{L}$     | LINE-1 deactivation rate constant                                         | 0.37              | 1/min       | *
 | $\lambda_{S}$     | SINE deactivation rate constant                                           | 1.18              | 1/min       | *
-| $V_{cell}$        | cell volume                                                               | 3700              | $μm^3$      | BNID:105879
 
 ### Table with modified parameters (relative to the reference model)
 | Designation       | Description                                                               | Value             | Unit        | Source  

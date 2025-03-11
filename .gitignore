@@ -1,0 +1,11 @@
+### Notebooks .gitignore ###
+.ipynb_checkpoints/
+
+# ignore folders
+**/.ipynb_checkpoints/
+**/__pycache__/
+
+# ignore formats
+**/*.google-cookie
+**/*.svg/
+**/*.png/
